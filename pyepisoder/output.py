@@ -34,7 +34,7 @@ class FormattingRenderer(object):
 		airdate = episode.airdate.strftime(self._dateformat)
 		string = string.replace("%airdate", airdate)
 		string = string.replace("%show", episode.show.name)
-		string = string.replace("%season", str(episode.season))
+		string = string.replace("%season", "%02d" % episode.season)
 		string = string.replace("%epnum", "%02d" % episode.episode)
 		string = string.replace("%eptitle", str(episode.title))
 		string = string.replace("%totalep", str(episode.totalnum))
